@@ -1,0 +1,411 @@
+/*小龟支付页面*/
+
+.contain_payment h1 {
+	font-size: 4.6vw;
+	text-align: center;
+	padding: 28px 0px;
+}
+
+.contain_payment .store_content {
+	text-align: center;
+	padding: 5.4vw 0px 4.7vw;
+}
+
+.contain_payment .store_content .store_img {
+	width: 16vw;
+	height: 16vw;
+	border-radius: 10px;
+}
+
+.contain_payment .store_content .store_name {
+	font-size: 4vw;
+	color: #444444;
+	padding-top: 2.67vw;
+}
+
+.payment_sprice_box {
+	padding: 0px 6.7vw;
+}
+
+.payment_sprice_box .pay_title {
+	font-size: 3.6vw;
+	padding-bottom: 10px;
+	color: #222;
+}
+
+.payment_sprice_box .sprice_content {
+	/*padding: 4vw 0px 3.33vw;*/
+	height: 16vw;
+	display: flex;
+}
+
+.payment_sprice_box .sprice_content span {
+	color: #222;
+	font-size: 6.7vw;
+	flex: 1;
+}
+
+.payment_sprice_box .sprice_content p {
+	text-align: center;
+	flex: 8;
+	padding-top: 4.6vw;
+}
+
+.payment_sprice_box .sprice_content input {
+	font-size: 4.7vw;
+	color: #222222;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: none;
+	padding-right: 10vw;
+}
+
+.contain_payment .payment_deductible {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 6.7vw 0px 6.7vw;
+	height: 16vw;
+	/*background: url(../img/address/acquire.png) no-repeat 91vw center / 7px 15px;*/
+}
+
+.contain_payment .payment_deductible .span_l {
+	font-size: 3.6vw;
+	color: #222222;
+}
+
+.contain_payment .payment_deductible .span_l i {
+	width: 4.7vw;
+	height: 4.7vw;
+	background: url(../img/payment/icon_01.png) no-repeat center center / 100% 100%;
+	margin-right: 2.4vw;
+}
+
+.contain_payment .payment_deductible .span_r {
+	/*font-size: 4vw;*/
+	position: relative;
+}
+
+.contain_payment .payment_deductible .span_r .input_integral {
+	width: 20vw;
+	height: 8vw;
+	font-size: 4vw;
+	color: #222222;
+	text-align: center;
+	border: none;
+	background: #EEEEEE;
+}
+
+.contain_payment .payment_deductible .span_r .span_sprice {
+	font-size: 4vw;
+	padding: 0px 3.3vw 0px 1.3vw;
+}
+
+.color_pink {
+	color: #E5004F;
+}
+
+.color_999 {
+	color: #999;
+}
+
+.buttom_sub {
+	text-align: center;
+	padding-top: 38px;
+}
+
+.btn_submit {
+	border: none;
+	background: #5DDAB9;
+	color: #FFFFFF;
+	width: 94vw;
+	height: 12vw;
+	border-radius: 10px;
+}
+
+
+/*checkbox、radio begin*/
+
+input[type="radio"],
+input[type="checkbox"] {
+	width: 5vw;
+	height: 5vw;
+	opacity: 0;
+	position: relative;
+	top: 4px;
+	left: 2px;
+	z-index: 10;
+}
+
+label {
+	position: absolute;
+	z-index: 1;
+	/*left: 0px;*/
+	right: 0px;
+	top: 6px;
+	width: 4.3vw;
+	height: 4.3vw;
+	border-radius: 50%;
+	border: 1px solid #999;
+}
+
+
+/*设置选中的input的样式*/
+
+
+/* + 是兄弟选择器,获取选中后的label元素*/
+
+input:checked+label {
+	background-color: #5DD9AB;
+	border: 1px solid #5DD9AB;
+}
+
+input:checked+label::after {
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 10px;
+	top: 0px;
+	left: 5px;
+	border: 2px solid #fff;
+	border-top: none;
+	border-left: none;
+	transform: rotate(45deg);
+}
+
+
+/*checkbox、radio end*/
+
+
+/*-----------------------交易成功-------------------------*/
+
+.contain_successtrade {
+	background: #ffde7b;
+}
+
+.contain_successtrade_box h1 {
+	font-size: 4.6vw;
+	text-align: center;
+	padding: 3.8vw 0px;
+	display: none;
+}
+
+.contain_successtrade .contain_successtrade_bg {
+	height: 84vh;
+	background: url(../img/payment/icon_02.png) no-repeat center top / 100% 100%;
+}
+
+.contain_successtrade .successtrade_content {}
+
+.contain_successtrade .successtrade_content .successtrade_top {
+	/*padding-top: 12.14vh;有标题*/
+	padding-top: 19.865vh;
+	text-align: center;
+}
+
+.contain_successtrade .successtrade_content .successtrade_top .successtrade_txt {
+	font-size: 4.67vw;
+	color: #FEBC1F;
+	padding: 3.6vw 0px;
+}
+
+.contain_successtrade .successtrade_content .successtrade_top .successtrade_guimi {
+	color: #FEBC1F;
+	padding-top: 1vw;
+}
+
+.contain_successtrade .successtrade_content .successtrade_tcenter {
+	text-align: center;
+	padding-top: 11.5vw;
+}
+
+.contain_successtrade .successtrade_content .successtrade_tcenter .span_txt1 {
+	color: #FFFFFF;
+	line-height: 8vw;
+}
+
+.contain_successtrade .successtrade_content .successtrade_tcenter .span_txt2 {
+	color: #FFFBCA;
+	line-height: 5vw;
+	padding-top: 3.6vw;
+}
+
+.contain_successtrade .successtrade_bottom {
+	padding-top: 3vw;
+}
+
+.contain_successtrade .successtrade_bottom .button {
+	width: 32.8vw;
+	height: 9.33vw;
+	border: 1px solid #fff;
+	color: #FFFFFF;
+	font-size: 4vw;
+	display: block;
+	text-align: center;
+	line-height: 9.33vw;
+	margin: 0px auto;
+	margin-top: 2.27vw;
+}
+
+.contain_successtrade .successtrade_explain {
+	text-align: center;
+	padding-top: 2vw;
+}
+
+.contain_successtrade .successtrade_explain a {
+	color: #FFFFFF;
+}
+
+.contain_successtrade .successtrade_explain i {
+	display: inline-block;
+	width: 3.4vw;
+	height: 3.4vw;
+	background: url(../img/payment/icon_explain.png) no-repeat center center / 100% 100%;
+	position: relative;
+	top: 2px;
+	margin-left: 5px;
+}
+
+.contain_successtrade .contain_successtrade_footer {
+	height: 16vh;
+	background: url(../img/payment/icon_03.png) no-repeat center top / 100% 100%;
+}
+
+
+/*-----------------------新用户绑定手机号-------------------------*/
+
+.contain_newbinding {
+	background: #ffde7b;
+}
+
+.contain_newbinding_box h1 {
+	font-size: 4.6vw;
+	text-align: center;
+	padding: 3.8vw 0px;
+	display: none;
+}
+
+.contain_newbinding .contain_successtrade_bg {
+	height: 84vh;
+	background: url(../img/payment/icon_02.png) no-repeat center top / 100% 100%;
+}
+
+.contain_newbinding .successtrade_content {}
+
+.contain_newbinding .successtrade_content .successtrade_top {
+	/*padding-top: 12.14vh;有标题*/
+	padding-top: 19.865vh;
+	text-align: center;
+}
+
+.contain_newbinding .successtrade_content .successtrade_top .successtrade_txt {
+	font-size: 4.67vw;
+	color: #FEBC1F;
+	padding: 3.6vw 0px;
+}
+
+.contain_newbinding .successtrade_content .successtrade_top .successtrade_guimi {
+	color: #FEBC1F;
+	padding-top: 1vw;
+}
+
+.contain_newbinding .successtrade_content .successtrade_tcenter {
+	text-align: center;
+	padding-top: 11.5vw;
+}
+
+.contain_newbinding .successtrade_content .successtrade_tcenter .span_txt1 {
+	color: #FFFFFF;
+	line-height: 7vw;
+}
+
+.contain_newbinding .successtrade_content .successtrade_tcenter .span_txt2 {
+	padding-top: 3.6vw;
+}
+
+.contain_newbinding .successtrade_content .successtrade_tcenter .span_txt2 .input_phone {
+	width: 53.3vw;
+	height: 9.3vw;
+	border: none;
+	padding: 0px 2.93vw;
+}
+
+
+/*验证码*/
+
+.contain_newbinding .successtrade_content .successtrade_tcenter .span_txt2 .verification_code {
+	width: 53.3vw;
+	height: 9.3vw;
+	display: flex;
+	margin: 0px auto;
+	align-items: center;
+	margin-top: 4vw;
+	justify-content: space-between;
+	background: #FFFFFF;
+}
+
+.contain_newbinding .successtrade_content .successtrade_tcenter .span_txt2 .verification_code .input_code {
+	width: 26.6vw;
+	height: 9.3vw;
+	padding-left: 2.93vw;
+	border: none;
+}
+
+.contain_newbinding .successtrade_content .successtrade_tcenter .span_txt2 .verification_code .btn_code {
+	width: 22vw;
+	height: 6vw;
+	margin-right: 2vw;
+	border: none;
+	background: #5DD9AB;
+	color: #FFFFFF;
+}
+
+
+/*验证码 end*/
+
+.contain_newbinding .successtrade_bottom {
+	padding-top: 3vw;
+	text-align: center;
+}
+
+.contain_newbinding .successtrade_bottom .button {
+	width: 32.8vw;
+	height: 9.33vw;
+	border: 1px solid #fff;
+	color: #FFFFFF;
+	font-size: 4vw;
+	display: block;
+	text-align: center;
+	line-height: 9.33vw;
+	margin: 0px auto;
+	margin-top: 2.27vw;
+	background: none;
+	
+}
+
+.contain_newbinding .successtrade_explain {
+	text-align: center;
+	padding-top: 2vw;
+}
+
+.contain_newbinding .successtrade_explain a {
+	color: #FFFFFF;
+}
+
+.contain_newbinding .successtrade_explain i {
+	display: inline-block;
+	width: 3.4vw;
+	height: 3.4vw;
+	background: url(../img/payment/icon_explain.png) no-repeat center center / 100% 100%;
+	position: relative;
+	top: 2px;
+	margin-left: 5px;
+}
+
+.contain_newbinding .contain_successtrade_footer {
+	height: 16vh;
+	background: url(../img/payment/icon_03.png) no-repeat center top / 100% 100%;
+}
+
+/*查看积分*/

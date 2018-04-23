@@ -1,0 +1,253 @@
+
+/*地址列表*/
+
+.contain_address {
+	background: #f8f8f8;
+	overflow: hidden;
+}
+
+.address_search {
+	text-align: center;
+	padding: 15px 4vw;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFFFFF;
+	z-index: 100;
+}
+
+
+/*.address_search .input_search_c{width: 92vw;height: 8vw;border: none;color: #999999;text-align: center;
+background:#ecdcdc url(../img/address/search.png) no-repeat 38vw center / 3.5vw 3.5vw;}*/
+
+.address_search .input_search_l {
+	width: 92vw;
+	height: 8vw;
+	border: none;
+	color: #999999;
+	padding-left: 7vw;
+	background: #eee url(../img/address/search.png) no-repeat 2vw center / 3.5vw 3.5vw;
+}
+
+.contain_address .content_list {
+	background: #fff;
+	margin-top: 2.66667vw;
+}
+
+.contain_address .content_list .myradio {
+	/*display: none;*/
+}
+
+.contain_address .content_list_box {
+	padding: 16vw 0px 12.8vw;
+}
+
+.contain_address .content_list_box div:first-child {
+	margin-top: 0vw;
+}
+
+.contain_address .content_list .p_ad_top {
+	font-size: 3.6vw;
+	color: #000;
+}
+
+.contain_address .content_list .p_ad_con>span {
+	font-size: 3.6vw;
+	color: #999;
+}
+
+.contain_address .content_list .p_ad_con .span_mobile {
+	padding-left: 2.6666vw;
+}
+
+.contain_address .content_list .p_ad_bot {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contain_address .content_list .p_ad_bot .p_l {
+	color: #444444;
+	position: relative;
+}
+
+.contain_address .content_list .p_ad_bot .p_l img {
+	position: relative;
+	bottom: 2px;
+	margin-right: 2vw;
+	display: none;
+}
+/*checkbox、radio begin*/
+input[type="radio"],
+input[type="checkbox"] {
+	width: 5vw;
+	height: 4vw;
+	opacity: 0;
+}
+
+.span_radio {
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	width: 4vw;
+	height: 4vw;
+	border-radius: 50%;
+	border: 1px solid #999;
+}
+
+
+/*设置选中的input的样式*/
+
+
+/* + 是兄弟选择器,获取选中后的label元素*/
+
+input:checked+span {
+	background-color: #fe6d32;
+	border: 1px solid #fe6d32;
+}
+
+input:checked+span::after {
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 10px;
+	top: 0px;
+	left: 4px;
+	border: 2px solid #fff;
+	border-top: none;
+	border-left: none;
+	transform: rotate(45deg)
+}
+/*checkbox、radio end*/
+.contain_address .content_list .p_ad_bot .p_r span>img {
+	margin-right: 1.86vw;
+	position: relative;
+	bottom: 2px;
+}
+
+.contain_address .content_list .p_ad_bot .p_r>span {
+	color: #444;
+}
+
+.contain_address .content_list .p_ad_bot .p_r .span_edit_img {
+	width: 3.6vw;
+	height: 3.86vw;
+}
+
+.contain_address .content_list .p_ad_bot .p_r .span_delete_img {
+	width: 3.86vw;
+	height: 4vw;
+}
+
+.address_addadress {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background: #FFFFFF;
+	border-top: 1px solid #EEEEEE;
+}
+
+.address_addadress .btn_add {
+	color: #444444;
+	width: 100vw;
+	height: 12.8vw;
+	background: none;
+	border: none;
+}
+
+.address_addadress .btn_add img {
+	margin-right: 2.4vw;
+	position: relative;
+	bottom: 2px;
+}
+
+.contain_address input:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+
+
+/*添加收货人地址*/
+
+.contain_addAdress {}
+
+.contain_addAdress h2 {
+	font-size: 4.266vw;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 20px;
+}
+
+.contain_addAdress .addAdress_list .adress_list_content {
+	height: 12vw;
+	padding: 0px 4vw;
+	display: flex;
+	align-items: center;
+}
+
+.contain_addAdress .addAdress_list .adress_list_content span {
+	color: #000000;
+}
+
+.contain_addAdress .addAdress_list .adress_list_content input {
+	font-size: 3.6vw;
+	color: #999999;
+}
+
+.contain_addAdress .addAdress_list .adress_list_content .input_name,
+.contain_addAdress .addAdress_list .adress_list_content .input_phone,
+.contain_addAdress .addAdress_list .adress_list_content .input_ad,
+.contain_addAdress .addAdress_list .adress_list_content .input_admore {
+	width: 60vw;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+}
+
+.contain_addAdress .addAdress_list .addad_ad {
+	background: url(../img/address/acquire.png) no-repeat 94vw center / 1.74vw 2.94vw;
+}
+
+.contain_addAdress .addAdress_list .addad_ad img {
+	width: 3.0666vw;
+	height: 3.6vw;
+	margin-left: 4vw;
+}
+
+.contain_addAdress .addAdress_list .adress_list_content input[type="checkbox"] {
+	width: 3.6vw;
+	height: 3.6vw;
+	position: relative;
+	top: 2px;
+}
+
+.contain_addAdress .addAdress_list .addsave {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.contain_addAdress .addAdress_list .addad_defaultad {
+	position: relative;
+}
+
+.contain_addAdress .addAdress_list .addad_defaultad img {
+	position: relative;
+	bottom: 2px;
+}
+
+.contain_addAdress .addAdress_list .addad_defaultad .span_radio {
+	top: 16px;
+	left: 4vw;
+}
+
+.contain_addAdress .addAdress_list .but_addsave {
+	width: 92vw;
+	height: 12vw;
+	background: #5DD9AB;
+	border: none;
+	font-size: 4.66667vw;
+	color: #FFFFFF;
+	border-radius: 10px;
+}
