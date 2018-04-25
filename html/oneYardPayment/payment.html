@@ -26,11 +26,11 @@
 				<form>
 					<h1 class="top_title">小龟支付</h1>
 					<div class="store_content">
+						<p class="store_name"><strong>付款给</strong>店铺名称</p>
 						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524213956254&di=3fb66a76d8389294283ff6714162ac28&imgtype=0&src=http%3A%2F%2Fimgqn.koudaitong.com%2Fupload_files%2F2015%2F03%2F19%2FFgGuemyz9vGjlRqZmeql_cPR4XlC.jpg" class="store_img" />
-						<p class="store_name">店铺名称</p>
 					</div>
 					<div class="payment_sprice_box">
-						<p class="pay_title">支付金额</p>
+						<p class="pay_title">金额</p>
 						<div class="sprice_content">
 							<span>￥</span>
 							<p>
@@ -39,19 +39,47 @@
 						</div>
 					</div>
 					<div class="payment_deductible">
-						<p class="span_l"><i class="fl"></i>龟米抵扣<span style="color: #999;">(余额<span id="guimi_currency">50</span>)</span></p>
+						<p class="deductible_top">选择优惠(龟米余额0)</p>
+						<div class="deductible_bot" id="choice_gcoin">
+							<span class="span_l color_pink fontsize30">优惠50元</span>
+							<span class="span_r color_999 fontsize30">-50龟米</span>
+						</div>
+						<!--<p class="span_l"><i class="fl"></i>龟米抵扣<span style="color: #999;">(余额<span id="guimi_currency">50</span>)</span></p>
 						<div class="span_r">
 							<input type="number" placeholder="0" id="input_integral" class="input_integral bord-radiu5" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)"/>
 							<span class="color_pink span_sprice">-￥30</span>
 							<input type="checkbox" class="myradio" id="btn_checkbox"/>
 							<label class="label_radio"></label>
-						</div>
+						</div>-->
+					</div>
+					<div class="amount_payment">
+						<p class="fontsize100"><sup class="fontsize50">￥</sup>50.00</p>
 					</div>
 					<div class="buttom_sub">
 						<!--0表示新用户未绑定手机号，1直接跳转到交易已完成页面-->
-						<button class="btn_submit" onclick="toSuccessful(1)">确定支付￥0</button>
+						<button class="btn_submit" onclick="toSuccessful(1)">付款</button>
 					</div>
+
 				</form>
+			</div>
+		</div>
+		<!--选择金币悬浮窗-->
+		<div class="park_bg"></div>
+		<div class="choice_guibi">
+			<div class="gold_coin_top">
+				<p class="p_left"></p>
+				<p class="p_center fontsize35">龟米优惠</p>
+				<p class="p_right fontsize30 btn_parkclose">确定</p>
+			</div>
+			<div class="gold_coin_content">
+				<div class="coin_content_l">
+					<input type="checkbox" class="myradio" id="btn_checkbox"/>
+					<label class="label_radio"></label>
+				</div>
+				<div class="coin_content_r">
+					<p class="p_top fontsize35">小龟支付到店优惠</p>
+					<p class="p_bot fontsize30">龟米余额50，最高优惠50元</p>
+				</div>
 			</div>
 		</div>
 		<script src="../../js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>

@@ -175,7 +175,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .fontsize30 {
 	font-size: 4vw;
 }
-
+.fontsize35{
+	font-size: 4.667vw;
+}
 .fontsize40 {
 	font-size: 5.333vw;
 }
@@ -187,3 +189,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .fontsize80 {
 	font-size: 10.67vw;
 }
+.fontsize100 {
+	font-size: 13.33vw;
+}
+

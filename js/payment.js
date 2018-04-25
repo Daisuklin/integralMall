@@ -4,18 +4,29 @@ $(document).ready(function() {
 	$('.payment_deductible .span_r .span_sprice').addClass('color_999').removeClass('color_pink'); //价格文字变灰
 	$('.payment_deductible .span_r .span_sprice').val('0');
 	var oldguimi_currency = $('#guimi_currency').val();
-	console.info("oldguimi_currency--", oldguimi_currency)
+
 	//是否选择金币支付
-	$("#btn_checkbox").on('click', function() {
-		if(!$("#btn_checkbox").is(':checked')) {
-			//不选择
-			$('.payment_deductible .span_r .input_integral').attr('disabled', 'true');
-			$('.payment_deductible .span_r .span_sprice').addClass('color_999').removeClass('color_pink'); //价格文字变灰
-		} else {
-			$('.payment_deductible .span_r .input_integral').removeAttr('disabled');
-			$('.payment_deductible .span_r .span_sprice').addClass('color_pink').removeClass('color_999'); //价格文字还原
-		}
-	});
+	//	$("#btn_checkbox").on('click', function() {
+	//		if(!$("#btn_checkbox").is(':checked')) {
+	//			//不选择
+	//			$('.payment_deductible .span_r .input_integral').attr('disabled', 'true');
+	//			$('.payment_deductible .span_r .span_sprice').addClass('color_999').removeClass('color_pink'); //价格文字变灰
+	//		} else {
+	//			$('.payment_deductible .span_r .input_integral').removeAttr('disabled');
+	//			$('.payment_deductible .span_r .span_sprice').addClass('color_pink').removeClass('color_999'); //价格文字还原
+	//		}
+	//	});
+
+	//选择金币弹窗
+	$('#choice_gcoin').on('click', function() {
+		$('.park_bg').delay(200).fadeIn();
+		$('.choice_guibi').slideDown().fadeIn(600);
+	})
+	//关闭选择金币弹窗
+	$('.choice_guibi .btn_parkclose').on('click',function(){
+		$('.park_bg').delay(200).fadeOut();
+		$('.choice_guibi').slideUp(600);
+	})
 
 })
 // Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
@@ -42,12 +53,12 @@ function OnPropChanged(event) {
 	}
 }
 //支付完成之后的跳转判断
-function toSuccessful(event){
+function toSuccessful(event) {
 	console.info(event)
-	if(event==1){
+	if(event == 1) {
 		//跳转到已完成页面
 		window.open('successfulTrade.html')
-	}else{
+	} else {
 		window.open('../html/oneYardPayment/newUserBinding.html')
 	}
 }
