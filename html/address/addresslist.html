@@ -46,8 +46,8 @@
 							</label>
 								</p>
 								<p class="p_r">
-									<span class="span_edit fontsize24 pad-r48"><img src="../../img/address/compile.png" class="span_edit_img" />编辑</span>
-									<span class="span_delete fontsize24"><img src="../../img/address/delete.png" class="span_delete_img" />删除</span>
+									<span class="span_edit fontsize24 pad-r48" onclick="editAdress()"><img src="../../img/address/compile.png" class="span_edit_img" />编辑</span>
+									<span class="span_delete fontsize24" onclick="delecteAdress()"><img src="../../img/address/delete.png" class="span_delete_img" />删除</span>
 								</p>
 							</div>
 						</div>
@@ -65,8 +65,8 @@
 							</label>
 								</p>
 								<p class="p_r">
-									<span class="span_edit fontsize24 pad-r48"><img src="../../img/address/compile.png" class="span_edit_img" />编辑</span>
-									<span class="span_delete fontsize24"><img src="../../img/address/delete.png" class="span_delete_img" />删除</span>
+									<span class="span_edit fontsize24 pad-r48" onclick="editAdress()"><img src="../../img/address/compile.png" class="span_edit_img" />编辑</span>
+									<span class="span_delete fontsize24" onclick="delecteAdress()"><img src="../../img/address/delete.png" class="span_delete_img" />删除</span>
 								</p>
 							</div>
 						</div>
@@ -74,12 +74,26 @@
 				</div>
 				<!--list end-->
 				<div class="address_addadress">
-					<button class="btn_add fontsize27"><img src="../../img/address/plus.png" class="icon_size30"/>新增收货地址</button>
+					<button class="btn_add fontsize27" onclick="addAdress()"><img src="../../img/address/plus.png" class="icon_size30"/>新增收货地址</button>
 				</div>
 			</div>
 		</div>
-		<script src="../../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/addresslist.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//添加选择地址
+			function addAdress() {
+				window.open("../address/addAddress.html")
+			}
+			//编辑选择地址
+			function editAdress() {
+				window.open("../address/addAddress.html")
+			}
+			//删除地址
+			function delecteAdress(){
+				alert("小黑黑，这里是删除")
+			}
+		</script>
 	</body>
 
 </html>

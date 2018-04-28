@@ -1,5 +1,16 @@
 /*小龟支付页面*/
 
+.contain_payment {
+	background: #F8F8F8;
+	padding: 2.67vw;
+	height: 100vh;
+}
+
+.contain_payment form {
+	background: #FFFFFF;
+	padding-bottom: 8vw;
+}
+
 .contain_payment h1 {
 	font-size: 4.6vw;
 	text-align: center;
@@ -8,10 +19,11 @@
 
 .contain_payment .store_content {
 	text-align: center;
-	padding: 5.4vw 8vw 4.7vw;
+	padding: 5.4vw 5.6vw 4.7vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom: 1px solid #EEEEEE;
 }
 
 .contain_payment .store_content .store_img {
@@ -31,7 +43,8 @@
 }
 
 .payment_sprice_box {
-	padding: 0px 6.7vw;
+	margin: 0px 5.6vw;
+	border-bottom: 1px solid #EEEEEE;
 }
 
 .payment_sprice_box .pay_title {
@@ -42,56 +55,67 @@
 
 .payment_sprice_box .sprice_content {
 	/*padding: 4vw 0px 3.33vw;*/
-	height: 16vw;
+	height: 14vw;
 	display: flex;
 }
 
 .payment_sprice_box .sprice_content span {
 	color: #222;
 	font-size: 6.7vw;
-	flex: 1;
+	/*flex: 1;*/
 }
 
 .payment_sprice_box .sprice_content p {
 	text-align: center;
-	flex: 8;
-	padding-top: 4.6vw;
+	/*flex: 5;*/
+	/*padding-top: 4.6vw;*/
 }
 
 .payment_sprice_box .sprice_content input {
-	font-size: 4.7vw;
 	color: #222222;
 	height: 40px;
 	line-height: 40px;
-	text-align: center;
+	padding-left: 3vw;
 	border: none;
-	padding-right: 10vw;
+	width: 77vw;
+	font-size: 7.3vw;
+	background: none;
+}
+
+.payment_sprice_box .sprice_content input:focus {
+	background: none;
 }
 
 .contain_payment .payment_deductible {
 	display: flex;
 	flex-direction: column;
-	padding: 0px 6.7vw 0px 6.7vw;
+	padding: 0px 5.6vw 0px 5.6vw;
 	height: 28.13vw;
 	justify-content: center;
 }
 
 .contain_payment .payment_deductible .deductible_top {
 	font-size: 4vw;
-	padding: 10px 0px;
+	padding: 18px 0px 0px;
 	color: #777;
 }
 
 .contain_payment .payment_deductible .deductible_bot {
-	background: url(../img/address/acquire.png) no-repeat 84.5vw center / 7px 15px;
+	background: url(../img/address/acquire.png) no-repeat 81vw center / 7px 12px;
 	display: flex;
 	padding: 4vw 4vw 4vw 0vw;
 	justify-content: space-between;
+	border-bottom: 1px solid #EEEEEE;
 }
 
 .contain_payment .amount_payment {
 	text-align: center;
-	padding: 6vw 0px 8vw;
+	padding: 6vw 5.6px 6vw;
+}
+
+.contain_payment .amount_payment sup {
+	position: relative;
+	top: -17px;
 }
 
 
@@ -142,7 +166,7 @@
 	border: none;
 	background: #5DDAB9;
 	color: #FFFFFF;
-	width: 94vw;
+	width: 84vw;
 	height: 12vw;
 	border-radius: 10px;
 }
@@ -229,6 +253,7 @@ input:checked+label::after {
 	justify-content: space-between;
 	height: 13.33vw;
 	align-items: center;
+	border-bottom: 1px solid #EEEEEE;
 }
 
 .choice_guibi .gold_coin_top p {
@@ -246,9 +271,14 @@ input:checked+label::after {
 	color: #5DD9AB;
 }
 
+.choice_guibi .gold_coin_content_list {
+	padding: 0vw 0vw 30vw;
+}
+
 .choice_guibi .gold_coin_content {
-	padding: 4vw 4vw 30vw;
+	padding: 4vw 4vw 4vw;
 	display: flex;
+	border-bottom: 1px solid #EEEEEE;
 	align-items: center;
 }
 
@@ -281,21 +311,26 @@ input:checked+label::after {
 
 .contain_successtrade .contain_successtrade_bg {
 	height: 84vh;
-	background: url(../img/payment/icon_02.png) no-repeat center top / 100% 100%;
+	/*background: url(../img/payment/icon_02.png) no-repeat center top / 100% 100%;*/
 }
 
 .contain_successtrade .successtrade_content {}
 
 .contain_successtrade .successtrade_content .successtrade_top {
 	/*padding-top: 12.14vh;有标题*/
-	padding-top: 19.865vh;
+	/*padding-top: 19.865vh;*/
+	height: 66.4vw;
+	width: 100vw;
 	text-align: center;
+	background: url(../img/payment/icon_04.png) no-repeat center center / 100% 100%;
+	position: relative;
+	z-index: 10;
 }
 
 .contain_successtrade .successtrade_content .successtrade_top .successtrade_txt {
 	font-size: 4.67vw;
 	color: #FEBC1F;
-	padding: 3.6vw 0px;
+	padding: 26.865vw 0px 3.6vw;
 }
 
 .contain_successtrade .successtrade_content .successtrade_top .successtrade_guimi {
@@ -303,9 +338,23 @@ input:checked+label::after {
 	padding-top: 1vw;
 }
 
+
+/*中间背景红*/
+
+.contain_successtrade .successtrade_content .successtrade_content_bgred {
+	background: #C92E3E;
+	/*height: 106.4vw;*/
+	min-height: 85.4vw;
+	width: 69.2vw;
+	margin: 0px auto;
+	position: relative;
+	bottom: 24.3vw;
+	z-index: 1;
+}
+
 .contain_successtrade .successtrade_content .successtrade_tcenter {
 	text-align: center;
-	padding-top: 11.5vw;
+	padding-top: 17.5vw;
 }
 
 .contain_successtrade .successtrade_content .successtrade_tcenter .span_txt1 {
@@ -339,10 +388,13 @@ input:checked+label::after {
 .contain_successtrade .successtrade_explain {
 	text-align: center;
 	padding-top: 2vw;
+	position: absolute;
+	top: 3.2vw;
+	right: 3.3vw;
 }
 
 .contain_successtrade .successtrade_explain a {
-	color: #FFFFFF;
+	color: #C92E3E;
 }
 
 .contain_successtrade .successtrade_explain i {
@@ -361,6 +413,21 @@ input:checked+label::after {
 }
 
 
+/*广告图*/
+
+.pictrue_ad {
+	text-align: center;
+	padding: 5.33vw 0px 3.74vw;
+	/*display: none;*/
+}
+
+.pictrue_ad img {
+	width: 61.34vw;
+	height: 24vw;
+	border-radius: 10px;
+}
+
+
 /*-----------------------新用户绑定手机号-------------------------*/
 
 .contain_newbinding {
@@ -376,22 +443,44 @@ input:checked+label::after {
 
 .contain_newbinding .contain_successtrade_bg {
 	height: 84vh;
-	background: url(../img/payment/icon_02.png) no-repeat center top / 100% 100%;
+	/*background: url(../img/payment/icon_02.png) no-repeat center top / 100% 100%;*/
 }
 
 .contain_newbinding .successtrade_content {}
 
-.contain_newbinding .successtrade_content .successtrade_top {
-	/*padding-top: 12.14vh;有标题*/
+
+/*.contain_newbinding .successtrade_content .successtrade_top {
 	padding-top: 19.865vh;
 	text-align: center;
+}
+.contain_newbinding .successtrade_content .successtrade_top .successtrade_txt {
+	font-size: 4.67vw;
+	color: #FEBC1F;
+	padding: 3.6vw 0px;
+}*/
+
+
+/* new*/
+
+.contain_newbinding .successtrade_content .successtrade_top {
+	/*padding-top: 12.14vh;有标题*/
+	/*padding-top: 19.865vh;*/
+	height: 66.4vw;
+	width: 100vw;
+	text-align: center;
+	background: url(../img/payment/icon_04.png) no-repeat center center / 100% 100%;
+	position: relative;
+	z-index: 10;
 }
 
 .contain_newbinding .successtrade_content .successtrade_top .successtrade_txt {
 	font-size: 4.67vw;
 	color: #FEBC1F;
-	padding: 3.6vw 0px;
+	padding: 26.865vw 0px 3.6vw;
 }
+
+
+/*new end*/
 
 .contain_newbinding .successtrade_content .successtrade_top .successtrade_guimi {
 	color: #FEBC1F;
@@ -400,7 +489,7 @@ input:checked+label::after {
 
 .contain_newbinding .successtrade_content .successtrade_tcenter {
 	text-align: center;
-	padding-top: 11.5vw;
+	padding-top: 17.5vw;
 }
 
 .contain_newbinding .successtrade_content .successtrade_tcenter .span_txt1 {
@@ -417,6 +506,20 @@ input:checked+label::after {
 	height: 9.3vw;
 	border: none;
 	padding: 0px 2.93vw;
+}
+
+
+/*中间背景红*/
+
+.contain_newbinding .successtrade_content .successtrade_content_bgred {
+	background: #C92E3E;
+	/*height: 106.4vw;*/
+	min-height: 85.4vw;
+	width: 69.2vw;
+	margin: 0px auto;
+	position: relative;
+	bottom: 24.3vw;
+	z-index: 1;
 }
 
 
@@ -449,6 +552,14 @@ input:checked+label::after {
 	color: #FFFFFF;
 }
 
+@media only screen and (min-width: 100px) and (max-width: 360px) {
+	.contain_newbinding .successtrade_content .successtrade_tcenter .span_txt2 .verification_code .btn_code {
+		font-size: 2.9vw;
+		padding: 0px;
+		line-height: 6vw;
+	}
+}
+
 
 /*验证码 end*/
 
@@ -474,10 +585,13 @@ input:checked+label::after {
 .contain_newbinding .successtrade_explain {
 	text-align: center;
 	padding-top: 2vw;
+	position: absolute;
+	top: 3.2vw;
+	right: 3.3vw;
 }
 
 .contain_newbinding .successtrade_explain a {
-	color: #FFFFFF;
+	color: #C92E3E;
 }
 
 .contain_newbinding .successtrade_explain i {
@@ -495,13 +609,94 @@ input:checked+label::after {
 	background: url(../img/payment/icon_03.png) no-repeat center top / 100% 100%;
 }
 
+
 /*引导页之提醒用户用支付宝或微信进行扫码*/
-.contain_bootPageScavengingError{}
-.contain_bootPageScavengingError .contain_imgbg{
+
+.contain_bootPageScavengingError .contain_imgbg {
 	width: 100vw;
 	height: 100vh;
 	background: url(../img/payment/bootpage_01.png) center center / 100% 100%;
 }
 
 
-/*查看积分*/
+/*引导页之查看积分*/
+
+.contain_bootPageIntegral {}
+
+.contain_bootPageIntegral .contain_imgbg {
+	width: 100vw;
+	height: 100vh;
+	background: url(../img/payment/bootpage_02.png) center center / 100% 100%;
+}
+
+.contain_bootPageIntegral .look_guimi {
+	display: block;
+	width: 43.4vw;
+	height: 11.4vw;
+	position: fixed;
+	bottom: 37.5vh;
+	left: 30vw;
+}
+
+.contain_bootPageIntegral .downloadxiaoguiapp {
+	display: block;
+	width: 72.6vw;
+	height: 15.47vw;
+	position: fixed;
+	bottom: 10.5vh;
+	left: 13.5vw;
+	background: none;
+	border: none;
+}
+
+
+/*引导页之寄件成功*/
+
+.contain_bootPageMailSuccess {}
+
+.contain_bootPageMailSuccess .contain_imgbg {
+	width: 100vw;
+	height: 100vh;
+	background: url(../img/payment/bootpage_03.png) center center / 100% 100%;
+}
+
+.contain_bootPageMailSuccess .look_guimi {
+	display: block;
+	width: 56.4vw;
+	height: 11.4vw;
+	position: fixed;
+	bottom: 37.5vh;
+	left: 22vw;
+}
+
+.contain_bootPageMailSuccess .downloadxiaoguiapp {
+	display: block;
+	width: 75.6vw;
+	height: 15.47vw;
+	position: fixed;
+	bottom: 10.5vh;
+	left: 13.5vw;
+	background: none;
+	border: none;
+}
+
+
+/*错误提示*/
+
+.park_prompt {
+z-index: 1000;
+	position: fixed;
+    top: 42vh;
+    width: 100vw;
+    text-align: center;
+}
+.ishide{display: none;}
+.park_prompt p {
+	color: #FFFFFF;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 3.6vw 4.27vw;
+	min-width: 57vw;
+	max-width: 77vw;
+	margin: 0px auto;
+	display: inline-block;
+}

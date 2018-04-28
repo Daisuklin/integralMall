@@ -1,0 +1,291 @@
+/*接收收款通知-接收邀请*/
+
+.contain_receiptNoticeReceipt {}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content {
+	background: #FFFFFF;
+	margin: 2.67vw;
+}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_top {}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_top h2 {
+	color: #222222;
+	padding: 10.67vw 0px 4.267vw;
+	text-align: center;
+}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_top p {
+	color: #222222;
+	text-align: center;
+}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_content {
+	padding: 8vw 0vw 5.33vw 10vw;
+}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_content p {
+	color: #666666;
+}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_content ul {}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_content ul li {
+	color: #666666;
+	width: 59.74vw;
+	list-style: disc;
+}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_bottom {
+	text-align: center;
+	padding-bottom: 5.33vw;
+}
+
+.contain_receiptNoticeReceipt .receiptNoticeReceipt_content .receiptNotice_bottom button {
+	width: 40vw;
+	height: 12vw;
+	background: #5DD9AB;
+	border: none;
+	color: #FFFFFF;
+}
+
+
+/*接收收款通知-等待商家确认添加*/
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content {
+	background: #FFFFFF;
+	margin: 2.67vw;
+}
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content .receiptNotice_top {
+	text-align: center;
+}
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content .receiptNotice_top p {
+	text-align: right;
+	padding: 6.666vw 6.666vw 2.267vw;
+}
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content .receiptNotice_top p span {
+	color: #5DD9AB;
+}
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content .receiptNotice_top img {
+	width: 16vw;
+	height: 16vw;
+}
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content .receiptNotice_content {
+	text-align: center;
+	padding-bottom: 27.0667vw;
+	padding-top: 5.333vw;
+}
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content .receiptNotice_content h2 {
+	color: #222222;
+	padding-bottom: 5.333vw;
+}
+
+.contain_receiptNoticeWaiting .receiptNoticeReceipt_content .receiptNotice_content p {
+	color: #666666;
+}
+
+
+/*接收收款通知-Error*/
+
+.contain_receiptNoticeError .receiptNoticeReceipt_content {
+	background: #FFFFFF;
+	margin: 2.67vw;
+}
+
+.contain_receiptNoticeError .receiptNoticeReceipt_content .receiptNotice_top {
+	text-align: center;
+	padding-top: 10.66667vw;
+}
+
+.contain_receiptNoticeError .receiptNoticeReceipt_content .receiptNotice_top img {
+	width: 16vw;
+	height: 16vw;
+}
+
+.contain_receiptNoticeError .receiptNoticeReceipt_content .receiptNotice_content {
+	text-align: center;
+	padding-bottom: 27.0667vw;
+	padding-top: 5.333vw;
+}
+
+.contain_receiptNoticeError .receiptNoticeReceipt_content .receiptNotice_content h2 {
+	color: #222222;
+	padding-bottom: 5.333vw;
+}
+
+.contain_receiptNoticeError .receiptNoticeReceipt_content .receiptNotice_content p {
+	color: #666666;
+}
+
+
+/*解除绑定*/
+
+.contain_receiptNoticeUnbind {
+	margin: 2.67vw;
+}
+
+.contain_receiptNoticeUnbind .unbind_content {}
+
+.unbind_content .unbind_content_top {
+	height: 24vw;
+	display: flex;
+	background: #FFFFFF;
+	align-items: center;
+}
+
+.unbind_content .unbind_content_top img {
+	width: 16vw;
+	height: 16vw;
+	margin-left: 5.333vw;
+	margin-right: 4vw;
+}
+
+.unbind_content .unbind_content_top p {
+	color: #222;
+}
+
+.unbind_content .unbind_accept {
+	display: flex;
+	align-items: center;
+	height: 16vw;
+	background: #FFFFFF;
+	justify-content: space-between;
+}
+
+.unbind_content .unbind_accept .unbind_accept_l {
+	padding-left: 4vw;
+}
+
+.unbind_content .unbind_accept .unbind_accept_l .p_titile {
+	color: #222222;
+}
+
+.unbind_content .unbind_accept .unbind_accept_l .p_txt {
+	color: #999999;
+}
+
+.unbind_content .unbind_accept .unbind_accept_r {
+	width: 14.7vw;
+	margin-right: 3.2vw;
+}
+
+
+/*button switch*/
+
+.unbind_accept_r .switch {
+	display: none;
+}
+
+.unbind_accept_r label {
+	position: relative;
+	display: block;
+	padding: 1px;
+	border-radius: 24px;
+	height: 6.7vw;
+
+	background-color: #eee;
+	cursor: pointer;
+	vertical-align: top;
+	-webkit-user-select: none;
+}
+
+.unbind_accept_r label:before {
+	content: '';
+	display: block;
+	border-radius: 24px;
+	height: 7.3vw;
+	background-color: #eee;
+	-webkit-transform: scale(1, 1);
+	-webkit-transition: all 0.3s ease;
+}
+
+.unbind_accept_r label:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -11px;
+	margin-left: -17px;
+	width: 6.7vw;
+	height: 6.7vw;
+	border-radius: 22px;
+	background-color: white;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+	-webkit-transform: translateX(-9px);
+	-webkit-transition: all 0.3s ease;
+}
+
+.unbind_accept_r .switch:checked~label:after {
+	-webkit-transform: translateX(17px);
+}
+
+.unbind_accept_r .switch:checked~label:before {
+	background-color: #5DD9AB;
+}
+
+
+/*button switch end*/
+
+.unbind_content .buttom_accept {
+	margin-top: 8vw;
+}
+
+.unbind_content .buttom_accept button {
+	height: 16vw;
+	background: #FFFFFF;
+	color: #E5004F;
+	width: 94.67vw;
+	border: none;
+	padding: 0px;
+}
+
+
+/*解除绑定弹窗*/
+
+.park_bg {
+	background: rgba(0, 0, 0, 0.5);
+	width: 101vw;
+	height: 101vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	display: none;
+}
+
+.park_accept {
+	position: fixed;
+	bottom: 0px;
+	z-index: 11;
+	width: 100vw;
+	left: 0px;
+	display: none;
+}
+
+.park_accept ul {}
+
+.park_accept ul li {
+	height: 13.333vw;
+	text-align: center;
+	line-height: 13.333vw;
+	background: #fff;
+}
+
+.park_accept ul li:nth-of-type(1) {
+	color: #666;
+}
+
+.park_accept ul li:nth-of-type(2) {
+	color: #E5004F;
+}
+
+.park_accept ul li:nth-of-type(3) {
+	color: #222222;
+	margin-top: 2.67vw;
+}

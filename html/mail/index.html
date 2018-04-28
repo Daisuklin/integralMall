@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes" />
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true" />
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application" />
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>寄件</title>
+		<!--style base-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<!--本地 css-->
+		<link rel="stylesheet" type="text/css" href="../../css/mail.css" />
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="contain_mailindex">
+				<div class="mail_centent">
+					<form>
+						<div class="store_name storelist">
+							<i class="bg_yellow border-radius50"></i>
+							<p class="p_name fontsize35">店铺名称</p>
+						</div>
+						<div class="store_adress storelist" onclick="choiceAdress()">
+							<i class="bg_blue border-radius50"></i>
+							<p class="p_adress fontsize27">选择地址</p>
+							<!--<p class="p_adress2 fontsize30">
+								<span class="span_top fontsize30">李先生 13512750224</span>
+								<span class="span_bot fontsize30">曙光路27号盛美大厦16楼小龟快跑</span>
+							</p>-->
+						</div>
+						<div class="store_message">
+							<input type="text" class="input_message" placeholder="添加备注" />
+						</div>
+						<div class="mail_centent_conpon">
+							<div class="mail_freight"><span class="span_l fontsize27">运费</span><span class="span_r fontsize30">￥5</span></div>
+							<div class="mail_integral">
+								<p class="mail_integral_top fontsize27">选择优惠(龟米余额50）</p>
+								<div class="mail_integral_bottom">
+									<!--<span class="span_l fontsize27 color_yellow">优惠5元</span>-->
+									<span class="span_l fontsize27 color_999">暂无优惠</span>
+									<span class="span_r fontsize27 color_999">-5龟米</span>
+								</div>
+							</div>
+							<div class="articlesofmail">
+								<input type="checkbox" class="myradio" id="btn_checkbox" />
+								<label class="label1"></label>
+								<span class="span_txt fontsize27">我同意<a href="javascript:">《快件运单契约条款》</a></span>
+							</div>
+							<div class="btn_submit_box">
+								<button class="btn_submit border-radius10 fontsize35">立即寄件￥0</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!--选择金币悬浮窗-->
+		<div class="park_bg"></div>
+		<div class="choice_guibi">
+			<div class="gold_coin_top">
+				<p class="p_left"></p>
+				<p class="p_center fontsize35">龟米优惠</p>
+				<p class="p_right fontsize30 btn_parkclose">确定</p>
+			</div>
+			<div class="gold_coin_content_list">
+				<div class="gold_coin_content">
+					<div class="coin_content_l">
+						<input type="checkbox" class="myradio" id="btn_checkbox" />
+						<label class="label2"></label>
+					</div>
+					<div class="coin_content_r">
+						<p class="p_top fontsize35">小龟支付到店优惠</p>
+						<p class="p_bot fontsize30">龟米余额50，最高优惠50元</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--弹窗    要显示错误提示时只需要把ishide去掉就行了-->
+		<div class="park_prompt ishide">
+			<p class="fontsize27 bord-radiu5">错误提示信息</p>
+		</div>
+	</body>
+	<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function($) {
+			//选择金币弹窗
+			$('.mail_centent_conpon .mail_integral').on('click', function() {
+				$('.park_bg').toggle();
+				//		$('.choice_guibi').slideDown().fadeIn(600);
+				$('.choice_guibi').toggle();
+			})
+			//关闭选择金币弹窗
+			$('.choice_guibi .btn_parkclose').on('click', function() {
+				$('.park_bg').toggle();
+				$('.choice_guibi').toggle();
+			})
+
+		})
+		//选择地址
+		function choiceAdress() {
+			window.open("../address/addresslist.html")
+		}
+		//弹窗错误提示
+		function showError(txt) {
+			document.getElementById('showError').style.display = 'block';
+			document.getElementById('errorTxt').innerHTML = txt;
+			setTimeout(function() {
+				document.getElementById('showError').style.display = 'none';
+				document.getElementById('errorTxt').innerHTML = '';
+			}, 2000)
+		}
+	</script>
+
+</html>

@@ -1,0 +1,259 @@
+/*地图主页*/
+
+.contain_choicemap {
+	background: #EEEEEE;
+	height: 100vh;
+}
+
+
+/*nav*/
+
+.contain_choicemap .choicemap_navigation {
+	height: 12vw;
+	padding: 0px 2.67vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #FFFFFF;
+	top: 0px;
+	left: 0px;
+}
+
+.contain_choicemap .choicemap_navigation .navigation_l {
+	display: flex;
+}
+
+.contain_choicemap .choicemap_navigation .navigation_l .icon_l {
+	display: block;
+	width: 2.67vw;
+	height: 3.333vw;
+	background: url(../img/address/icon_03.png) no-repeat center center / 100% 100%;
+	position: relative;
+	top: 3px;
+}
+
+.contain_choicemap .choicemap_navigation .navigation_l .icon_r {
+	display: block;
+	width: 2.93vw;
+	height: 1.7333vw;
+	background: url(../img/payment/order_top@2x.png) no-repeat center center / 100% 100%;
+	position: relative;
+	top: 7px;
+}
+
+.contain_choicemap .choicemap_navigation .navigation_l .icon_r2 {
+	background: url(../img/payment/order_bot@2x.png) no-repeat center center / 100% 100%;
+}
+
+.contain_choicemap .choicemap_navigation .navigation_l span {
+	padding: 0px 2.67vw;
+}
+
+.contain_choicemap .choicemap_navigation .navigation_r {}
+
+.contain_choicemap .choicemap_navigation .navigation_r input {
+	width: 71.73vw;
+	height: 8vw;
+	padding-left: 8vw;
+	background: #EEEEEE url(../img/address/icon_04.png) no-repeat 2.4vw center / 3.467vw 3.467vw;
+	border: none;
+	color: #999999;
+	border-radius: 30px;
+}
+
+
+/*nav end*/
+
+.choicemap_bottom {
+	margin: 2.67vw;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+.choicemap_mapmessage {
+	background: #FFFFFF;
+	width: 94.666vw;
+}
+
+.choicemap_mapmessage .mapmessage_sign {
+	height: 12vw;
+	display: flex;
+	align-items: center;
+	margin: 0px 2.67vw;
+}
+
+.choicemap_mapmessage .mapmessage_sign i {
+	display: block;
+	width: 3.2vw;
+	height: 3.8667vw;
+	background: url(../img/address/icon_02.png) no-repeat center center / 100% 100%;
+}
+
+.choicemap_mapmessage .mapmessage_sign span {
+	color: #444;
+	padding-left: 2.67vw;
+}
+
+.choicemap_mapmessage .mapmessage_detail {
+	/*height: 12vw;
+	line-height: 12vw;*/
+	padding-left: 8.667vw;
+}
+
+.choicemap_mapmessage .mapmessage_detail p {
+	color: #999999;
+	min-height: 12vw;
+	padding: 10px 10px 10px 0px;
+}
+
+.choicemap_bottom .btn_determine {
+	margin-top: 2.67vw;
+}
+
+.choicemap_bottom .btn_determine button {
+	border: none;
+	background: #5DD9AB;
+	color: #FFFFFF;
+	width: 94.666vw;
+	height: 12vw;
+}
+
+
+/*选择市级按钮时出现市级列表*/
+
+.address_municipal_level {
+	background: #FFFFFF;
+	height: 100vh;
+	position: fixed;
+	width: 100vw;
+	z-index: 100;
+	top: 12vw;
+	left: 0px;
+	padding: 0px 2.67vw;
+	display: none;
+}
+
+.address_municipal_level .municipal_level_top {
+	color: #999999;
+	height: 12vw;
+	line-height: 12vw;
+	border-top: 1px solid #EEEEEE;
+}
+
+.address_municipal_level .municipal_level_top span {
+	color: #444;
+	padding-right: 5.067vw;
+}
+
+.address_municipal_level .municipal_level_main {}
+
+
+/*-------------------------搜索地址------------------------*/
+
+.contain_searchmap {
+	background: #F8F8F8;
+	height: 100vh;
+}
+
+
+/*nav*/
+
+.contain_searchmap .choicemap_navigation {
+	height: 12vw;
+	padding: 0px 2.67vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #FFFFFF;
+	top: 0px;
+	left: 0px;
+}
+
+.contain_searchmap .choicemap_navigation .navigation_l input {
+	width: 80.4vw;
+	height: 8vw;
+	padding-left: 8vw;
+	background: #EEEEEE url(../img/address/icon_04.png) no-repeat 2.4vw center / 3.467vw 3.467vw;
+	border: none;
+	color: #999999;
+	border-radius: 30px;
+}
+
+.contain_searchmap .choicemap_navigation .navigation_r span {
+	padding: 2vw 2.67vw;
+	color: #5DD9AB;
+}
+
+
+/*nav end*/
+
+.choicemap_content {}
+
+.choicemap_content .choicemap_content_nav {}
+
+.choicemap_content .choicemap_content_nav ul {
+	height: 12vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.choicemap_content .choicemap_content_nav ul li {
+	flex: 1;
+	text-align: center;
+	height: 100%;
+}
+
+.choicemap_content .choicemap_content_nav ul li p {
+	display: inline-block;
+	height: 100%;
+	line-height: 12vw;
+	font-size: 3.6vw;
+	color: #999999;
+	border-bottom: 3px solid #fff;
+	padding: 0px 10px;
+}
+
+.choicemap_content .choicemap_content_nav ul li.active p {
+	color: #000;
+	border-color: #5DD9AB;
+}
+
+.choicemap_content .choicemap_main {
+	background: #FFFFFF;
+	padding: 0px 4vw;
+}
+
+.choicemap_content .choicemap_main ul {
+	padding-top: 2vw;
+}
+
+.choicemap_content .choicemap_main ul li {
+	height: 15.133vw;
+	padding-left: 7.2vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: url(../img/address/icon_06.png) no-repeat left center / 3.333vw 3.333vw;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.choicemap_content .choicemap_main ul li:last-child {
+	border-bottom: none;
+}
+
+.choicemap_content .choicemap_main ul li.active {
+	background: url(../img/address/icon_02.png) no-repeat left center / 3.2vw 3.87vw;
+}
+
+.choicemap_content .choicemap_main ul li .p_top {
+	font-size: 3.6vw;
+	color: #000000;
+	padding-bottom: 6px;
+}
+
+.choicemap_content .choicemap_main ul li .p_bot {
+	font-size: 3.6vw;
+	color: #999999;
+}

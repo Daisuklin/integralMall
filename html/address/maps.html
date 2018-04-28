@@ -1,85 +1,205 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-		<title>鼠标拾取地图坐标</title>
-		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
-		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.5&key=您申请的key值&plugin=AMap.Autocomplete"></script>
-		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<meta charset="UTF-8">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes" />
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true" />
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application" />
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>选择地址</title>
+		<!--style base-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<!--本地 css-->
+		<link rel="stylesheet" type="text/css" href="../../css/maps.css" />
+		<style>
+			.map {
+				height: 100%;
+				width: 60%;
+				float: left;
+			}
+			
+			.container_map {
+				width: 100vw;
+				height: 100vh;
+			}
+			
+			.amap-touch-toolbar .amap-zoomcontrol {
+				bottom: 36vw;
+			}
+			
+			.amap-ui-misc-positionpicker img {
+				width: 5.73vw !important;
+				height: 7.067vw !important;
+			}
+		</style>
 	</head>
 
 	<body>
-		<div id="container"></div>
-		<div id="myPageTop">
-			<table>
-				<tr>
-					<td>
-						<label>按关键字搜索：</label>
-					</td>
-					<td class="column2">
-						<label>左击获取经纬度：</label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="text" placeholder="请输入关键字进行搜索" id="tipinput">
-					</td>
-					<td class="column2">
-						<input type="text" readonly="true" id="lnglat">
-					</td>
-				</tr>
-			</table>
+		<div class="box">
+			<div class="contain_choicemap">
+				<div class="choicemap_navigation">
+					<div class="navigation_l" id="municipalLevelNav">
+						<i class="icon_l"></i>
+						<span class="fontsize27">广州</span>
+						<i class="icon_r"></i>
+					</div>
+					<div class="navigation_r">
+						<input type="text" name="search" id="" value="" class="fontsize27" placeholder="查找小区/大厦/学校等" onfocus="getfocus()" />
+					</div>
+				</div>
+				<!--选择市级按钮时出现市级列表 begin-->
+				<div class="address_municipal_level" id="municipalLevel">
+					<div class="municipal_level_top fontsize27">
+						<span class="fontsize27">广州</span>当前定位城市
+					</div>
+					<div class="municipal_level_main">
+						<ul>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<!--选择市级按钮时出现市级列表 end-->
+				<!--map begin-->
+				<div id="container" class="container_map" tabindex="0">
+
+				</div>
+				<!--map end-->
+				<div class="choicemap_bottom">
+					<div class="choicemap_mapmessage">
+						<div class="mapmessage_sign bg_right border_botomm">
+							<i></i>
+							<span class="fontsize30" id="nearestPOI">
+								<!--盛美大厦-->
+							</span>
+						</div>
+						<div class="mapmessage_detail">
+							<p id="address" class="fontsize30"> 曙光大道与田美路交叉口西南50米</p>
+						</div>
+					</div>
+					<div class="btn_determine">
+						<button class="fontsize35 border-radius10">确定</button>
+					</div>
+				</div>
+
+			</div>
 		</div>
-		<script type="text/javascript">
-			var map = new AMap.Map("container", {
-				resizeEnable: true
-			});
-			//  var marker, map = new AMap.Map("container", {
-			//      resizeEnable: true,
-			//      center: [116.397428, 39.90923],
-			//      zoom: 13
-			//  });
-			//为地图注册click事件获取鼠标点击出的经纬度坐标
-			var clickEventListener = map.on('click', function(e) {
-				var getLng = e.lnglat.getLng(); //经度
-				var getLat = e.lnglat.getLat(); //纬度
-				document.getElementById("lnglat").value = e.lnglat.getLng() + ',' + e.lnglat.getLat()
-				console.info("e.lnglat.getLng()", e.lnglat.getLng(), "e.lnglat.getLat()", e.lnglat.getLat())
-				updateMarker(getLng, getLat);
-			});
-			var auto = new AMap.Autocomplete({
-				input: "tipinput"
-			});
-			AMap.event.addListener(auto, "select", select); //注册监听，当选中某条记录时会触发
-			function select(e) {
-				if(e.poi && e.poi.location) {
-					map.setZoom(15);
-					map.setCenter(e.poi.location);
-				}
-			}
 
-			function updateMarker(getLng, getLat) {
-				marker = new AMap.Marker({
-					icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
-					position: [getLng, getLat]
-				});
-				marker.setMap(map);
-				console.info("map", map)
+		<!---->
 
-				// 自定义点标记内容
-				var markerContent = document.createElement("div");
-				// 点标记中的图标
-				var markerImg = document.createElement("img");
-				markerImg.className = "markerlnglat";
-				markerImg.src = "http://webapi.amap.com/theme/v1.3/markers/n/mark_r.png";
-				markerContent.appendChild(markerImg);
-				marker.setContent(markerContent); //更新点标记内容
-				marker.setPosition([getLng, getLat]); //更新点标记位置
-			}
-		</script>
+		<div id='right' style="display: none;">
+			<div>
+				<div class='title'>选址结果</div>
+				<div class='c'>经纬度:</div>
+				<div id='lnglat'></div>
+				<div class='c'>地址:</div>
+				<div id='address'></div>
+				<div class='c'>最近的路口:</div>
+				<div id='nearestJunction'></div>
+				<div class='c'>最近的路:</div>
+				<div id='nearestRoad'></div>
+				<div class='c'>最近的POI:</div>
+				<div id='nearestPOI'></div>
+			</div>
+		</div>
 	</body>
+	<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function($) {
+			//显示地级市名称
+			$(document).on('click', '#municipalLevelNav', function() {
+				$('#municipalLevel').toggle();
+				$(this).children('span').next().toggleClass('icon_r2');
+			})
+		})
+
+		function getfocus() {
+			window.location.href = "mapSearch.html?act=logout"
+		}
+	</script>
+	<script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.6&key=4b78d83ee70c958edbc3fc09b9caf349&plugin=AMap.ToolBar'></script>
+	<!-- UI组件库 1.0 -->
+	<script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+	<script type="text/javascript">
+		AMapUI.loadUI(['misc/PositionPicker'], function(PositionPicker) {
+			var map, geolocation;
+			map = new AMap.Map('container', {
+				zoom: 16,
+				scrollWheel: false,
+				resizeEnable: true
+			})
+			var positionPicker = new PositionPicker({
+				mode: 'dragMap',
+				map: map,
+				iconStyle: { //自定义外观
+					url: '../../img/address/icon_02.png',
+					ancher: [24, 40],
+					size: [48, 48]
+				}
+			});
+
+			positionPicker.on('success', function(positionResult) {
+				document.getElementById('lnglat').innerHTML = positionResult.position;
+				document.getElementById('address').innerHTML = positionResult.address;
+				document.getElementById('nearestJunction').innerHTML = positionResult.nearestJunction;
+				document.getElementById('nearestRoad').innerHTML = positionResult.nearestRoad;
+				document.getElementById('nearestPOI').innerHTML = positionResult.nearestPOI;
+				console.info(positionResult.address, '-', positionResult.nearestJunction, '-', positionResult.nearestRoad, '-', positionResult.nearestPOI)
+			});
+			positionPicker.on('fail', function(positionResult) {
+				document.getElementById('lnglat').innerHTML = ' ';
+				document.getElementById('address').innerHTML = ' ';
+				document.getElementById('nearestJunction').innerHTML = ' ';
+				document.getElementById('nearestRoad').innerHTML = ' ';
+				document.getElementById('nearestPOI').innerHTML = ' ';
+			});
+			var onModeChange = function(e) {
+				positionPicker.setMode(e.target.value)
+			}
+			positionPicker.start();
+			map.addControl(new AMap.ToolBar({
+				liteStyle: true
+			}))
+
+			//定位到当前位置
+			map.plugin('AMap.Geolocation', function() {
+				geolocation = new AMap.Geolocation({
+					enableHighAccuracy: true, //是否使用高精度定位，默认:true
+					timeout: 10000, //超过10秒后停止定位，默认：无穷大
+					buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+					zoomToAccuracy: true, //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+					buttonPosition: 'RB'
+				});
+				map.addControl(geolocation);
+				geolocation.getCurrentPosition();
+				AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息
+				AMap.event.addListener(geolocation, 'error', onError); //返回定位出错信息
+				console.info("geolocation", geolocation)
+			});
+			//解析定位结果
+			function onComplete(data) {
+				var str = ['定位成功'];
+				str.push('经度：' + data.position.getLng());
+				str.push('纬度：' + data.position.getLat());
+				if(data.accuracy) {
+					str.push('精度：' + data.accuracy + ' 米');
+				} //如为IP精确定位结果则没有精度信息
+				str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+				//				document.getElementById('tip').innerHTML = str.join('<br>');
+				console.info("定位", str.join('<br>'))
+			}
+			//解析定位错误信息
+			function onError(data) {
+				//				document.getElementById('tip').innerHTML = '定位失败';
+				console.info("定位失败")
+			}
+		});
+	</script>
 
 </html>

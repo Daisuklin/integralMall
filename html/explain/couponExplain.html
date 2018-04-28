@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<!-- UC强制全屏 -->
@@ -18,6 +19,7 @@
 		<!--本地 css-->
 		<link rel="stylesheet" type="text/css" href="../../css/explain.css" />
 	</head>
+
 	<body>
 		<div class="box">
 			<div class="contain_coupon">
@@ -41,14 +43,16 @@
 				</ul>
 			</div>
 		</div>
-		<script src="../../js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$(".contain_coupon ul li").click(function() {
-//					$(this).addClass('active').siblings().removeClass('active');
-					$(this).children('p').stop().fadeToggle(600).end().stop().toggleClass('active');
+					//					$(this).addClass('active').siblings().removeClass('active');
+					//					$(this).children('p').stop().fadeToggle(600).end().stop().toggleClass('active');
+					$(this).children('p').toggle();
 				})
 			})
 		</script>
 	</body>
+
 </html>

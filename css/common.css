@@ -64,7 +64,7 @@ a:active { color: #006699; }
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 dfn { font-style: italic; }
-mark { background: #ff0; color: #; }
+mark { background: #ff0; color: #000; }
 small { font-size: 80%; }
 sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 sup { top: -0.5em; }
@@ -74,7 +74,7 @@ hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
 pre { overflow: auto; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
 
-button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; outline:none;}
 button { overflow: visible; }
 button, select { text-transform: none; }
 button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
@@ -153,7 +153,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 }
 
 .btn-no {
-	border: ;
+	border: none;
 }
 
 .text-nowrap {
@@ -183,7 +183,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 }
 
 .fontsize50 {
-	font-size: 6.66667;
+	font-size: 6.66667vw;
 }
 
 .fontsize80 {
@@ -192,4 +192,19 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .fontsize100 {
 	font-size: 13.33vw;
 }
-
+.border-radius10 {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.border-radius50 {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+.bg_right{background: url(../img/address/acquire.png) no-repeat right center / 1.733vw 2.9333vw;}
+.border_botomm{border-bottom: 1px solid #EEEEEE;}

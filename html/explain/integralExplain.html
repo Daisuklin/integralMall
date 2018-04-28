@@ -43,14 +43,15 @@
 				</ul>
 			</div>
 		</div>
-		<script src="../../js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$(".contain_integral ul li").click(function() {
 					//					$(this).addClass('active').siblings().removeClass('active');
-					$(this).children('p').stop().fadeToggle(600).end().stop().toggleClass('active');
+					//					$(this).children('p').stop().fadeToggle(600).end().stop().toggleClass('active');
+					$(this).children('p').toggle();
 				})
-				
+
 			})
 		</script>
 	</body>

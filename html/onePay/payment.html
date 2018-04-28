@@ -24,9 +24,9 @@
 		<div class="box">
 			<div class="contain_payment">
 				<form>
-					<h1 class="top_title">小龟支付</h1>
+					<!--<h1 class="top_title">小龟支付</h1>-->
 					<div class="store_content">
-						<p class="store_name"><strong>付款给</strong>店铺名称</p>
+						<p class="store_name fontsize30"><strong class="fontsize35">付款给</strong>店铺名称</p>
 						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524213956254&di=3fb66a76d8389294283ff6714162ac28&imgtype=0&src=http%3A%2F%2Fimgqn.koudaitong.com%2Fupload_files%2F2015%2F03%2F19%2FFgGuemyz9vGjlRqZmeql_cPR4XlC.jpg" class="store_img" />
 					</div>
 					<div class="payment_sprice_box">
@@ -34,7 +34,7 @@
 						<div class="sprice_content">
 							<span>￥</span>
 							<p>
-								<input type="number" id="input_sprice" placeholder="请输入金额" />
+								<input type="text" name="price" value="" min="0.01" onKeyUp="amount(this)" id="input_sprice" placeholder="输入金额"/>
 							</p>
 						</div>
 					</div>
@@ -42,6 +42,7 @@
 						<p class="deductible_top">选择优惠(龟米余额0)</p>
 						<div class="deductible_bot" id="choice_gcoin">
 							<span class="span_l color_pink fontsize30">优惠50元</span>
+							<!--<span class="span_l color_999 fontsize30">暂无优惠</span>-->
 							<span class="span_r color_999 fontsize30">-50龟米</span>
 						</div>
 						<!--<p class="span_l"><i class="fl"></i>龟米抵扣<span style="color: #999;">(余额<span id="guimi_currency">50</span>)</span></p>
@@ -71,7 +72,8 @@
 				<p class="p_center fontsize35">龟米优惠</p>
 				<p class="p_right fontsize30 btn_parkclose">确定</p>
 			</div>
-			<div class="gold_coin_content">
+			<div class="gold_coin_content_list">
+				<div class="gold_coin_content">
 				<div class="coin_content_l">
 					<input type="checkbox" class="myradio" id="btn_checkbox"/>
 					<label class="label_radio"></label>
@@ -81,8 +83,17 @@
 					<p class="p_bot fontsize30">龟米余额50，最高优惠50元</p>
 				</div>
 			</div>
+			</div>
 		</div>
-		<script src="../../js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--弹窗   
+		*要显示错误提示时只需要把ishide去掉就行了   
+		* 调用onclick="showError(errortxt)"方法
+		* errortxt是错误提示内容
+		* -->
+		<div class="park_prompt ishide" id="showError">
+			<p class="fontsize27 bord-radiu5" id="errorTxt">错误提示信息</p>
+		</div>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/payment.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 

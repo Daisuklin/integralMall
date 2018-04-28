@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes" />
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true" />
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application" />
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>接收收款通知-解除邦定</title>
+		<!--style base-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<!--本地 css-->
+		<link rel="stylesheet" type="text/css" href="../../css/accountBook.css" />
+	</head>
+
+	<body style="background: #F8F8F8;">
+		<div class="box">
+			<div class="contain_receiptNoticeUnbind">
+				<div class="unbind_content">
+					<div class="unbind_content_top border_botomm">
+						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524213956254&di=3fb66a76d8389294283ff6714162ac28&imgtype=0&src=http%3A%2F%2Fimgqn.koudaitong.com%2Fupload_files%2F2015%2F03%2F19%2FFgGuemyz9vGjlRqZmeql_cPR4XlC.jpg" />
+						<p class="fontsize35">店铺名称</p>
+					</div>
+					<div class="unbind_accept">
+						<div class="unbind_accept_l">
+							<p class="p_titile fontsize30">接收他(她)的收款通知</p>
+							<p class="p_txt fontsize24">开启后，小龟快跑公众号将向你推送收款通知</p>
+						</div>
+						<div class="unbind_accept_r">
+							<!--switch button-->
+							<div class="container">
+								<div class="bg_con">
+									<input id="checked_1" type="checkbox" class="switch" />
+									<label for="checked_1"></label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="buttom_accept">
+						<button class="fontsize30 border-radius10" id="buttom_accept">解除绑定</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--确认解除弹窗-->
+		<div class="park_bg"></div>
+		<div class="park_accept">
+			<ul>
+				<li class="fontsize27 border_botomm">解除绑定后，你将不再接收他(她)的收款通知</li>
+				<li class="fontsize35">确定解绑</li>
+				<li class="fontsize35 btn_parkclose">取消</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function($) {
+			//开启弹窗
+			$('#buttom_accept').on('click', function() {
+				$('.park_bg').toggle();
+				$('.park_accept').toggle();
+			})
+			//关闭选择金币弹窗
+			$('.park_accept .btn_parkclose').on('click', function() {
+				$('.park_bg').toggle();
+				$('.park_accept').toggle();
+			})
+
+		})
+	</script>
+
+</html>

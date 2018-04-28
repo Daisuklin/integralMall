@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes" />
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true" />
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application" />
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>搜索地址</title>
+		<!--style base-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<!--本地 css-->
+		<link rel="stylesheet" type="text/css" href="../../css/maps.css" />
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="contain_searchmap">
+				<div class="choicemap_navigation">
+					<div class="navigation_l">
+						<input type="text" name="search" id="" value="" class="fontsize27" placeholder="查找小区/大厦/学校等" />
+					</div>
+					<div class="navigation_r">
+						<span class="fontsize27">搜索</span>
+					</div>
+				</div>
+				<div class="choicemap_content">
+					<div class="choicemap_content_nav">
+						<ul class="border_botomm" id="choicemap_content_ul">
+							<li class="active">
+								<p>全部</p>
+							</li>
+							<li>
+								<p>小区</p>
+							</li>
+							<li>
+								<p>大厦</p>
+							</li>
+							<li>
+								<p>学校</p>
+							</li>
+						</ul>
+					</div>
+					<div class="choicemap_main">
+						<ul id="choicemap_main_ul">
+							<li class="active">
+								<p class="p_top">重庆丰登老火锅</p>
+								<p class="p_bot">广州市花都区曙光大道与田美路交叉口西北50米</p>
+							</li>
+							<li>
+								<p class="p_top">重庆丰登老火锅</p>
+								<p class="p_bot">广州市花都区曙光大道与田美路交叉口西北50米</p>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function($) {
+			//nav 选择
+			$(document).on('click', '#choicemap_content_ul li', function(e) {
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+			//地址列表选择
+			$(document).on('click', '#choicemap_main_ul li', function(e) {
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+		})
+	</script>
+
+</html>

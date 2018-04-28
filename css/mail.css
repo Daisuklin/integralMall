@@ -1,0 +1,319 @@
+/*index*/
+
+.contain_mailindex {
+	background: #F8F8F8;
+	height: 100vh;
+	width: 100vw;
+}
+
+.mail_centent {
+	padding: 2.67vw;
+}
+
+.mail_centent .storelist {
+	height: 16vw;
+	display: flex;
+	align-items: center;
+	background: #FFFFFF;
+}
+
+.mail_centent .storelist i {
+	width: 2.67vw;
+	height: 2.67vw;
+	display: block;
+	margin: 0px 4vw;
+}
+
+.bg_yellow {
+	background: #F19149;
+}
+
+.bg_blue {
+	background: #5DD9AB;
+}
+
+.mail_centent .store_name {
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.mail_centent .store_name p {
+	color: #000000;
+}
+
+.mail_centent .store_adress {
+	background: url(../img/address/acquire.png) no-repeat 89.6vw center / 1.73vw 2.93vw;
+}
+
+.mail_centent .store_adress p.p_adress {
+	color: #999999;
+}
+
+.mail_centent .store_adress p.p_adress2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.mail_centent .store_adress p.p_adress2 .span_top {
+	color: #222222;
+}
+
+.mail_centent .store_adress p.p_adress2 .span_bot {
+	color: #999999;
+}
+
+.store_message {
+	margin-top: 2.67vw;
+	height: 16vw;
+	line-height: 16vw;
+	background: #FFFFFF;
+}
+
+.store_message input {
+	font-size: 3.6vw;
+	color: #222;
+	width: 100%;
+	padding: 0vw 4vw;
+	height: 11vw;
+	border: none;
+	background: none;
+}
+
+.mail_centent .mail_centent_conpon {
+	background: #FFFFFF;
+	margin-top: 2.67vw;
+}
+
+.mail_centent .mail_centent_conpon .mail_freight {
+	display: flex;
+	justify-content: space-between;
+	height: 12vw;
+	align-items: center;
+	padding: 0px 4vw;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.mail_centent .mail_centent_conpon .mail_freight .span_l {
+	color: #777777;
+}
+
+.mail_centent .mail_centent_conpon .mail_freight .span_r {
+	color: #F80029;
+}
+
+.mail_centent .mail_integral {}
+
+.mail_centent .mail_integral .mail_integral_top {
+	color: #777777;
+	padding: 4vw 4vw 0px;
+}
+
+.mail_centent .mail_integral .mail_integral_bottom {
+	display: flex;
+	justify-content: space-between;
+	padding: 4vw;
+	background: url(../img/address/acquire.png) no-repeat 89.6vw center / 1.73vw 2.93vw;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.mail_centent .mail_integral .mail_integral_bottom .span_l {}
+
+.mail_centent .mail_integral .mail_integral_bottom .span_r {
+	padding-right: 3vw;
+}
+
+.color_yellow {
+	color: #F19149;
+}
+
+.color_999 {
+	color: #999999;
+}
+
+.mail_centent_conpon .articlesofmail {
+	position: relative;
+	text-align: center;
+	margin-top: 8vw;
+	padding: 0vw 0px 3.333vw;
+}
+
+.mail_centent_conpon.articlesofmail .span_txt {
+	color: #999999;
+}
+
+.mail_centent_conpon .articlesofmail .span_txt a {
+	color: #5DD9AB;
+}
+
+.mail_centent_conpon .btn_submit_box {
+	text-align: center;
+	padding-bottom: 4vw;
+}
+
+.mail_centent_conpon .btn_submit {
+	width: 86.7vw;
+	height: 12vw;
+	border: none;
+	background: #5DD9AB;
+	color: #FFFFFF;
+}
+
+
+/*checkbox、radio begin*/
+
+input[type="radio"],
+input[type="checkbox"] {
+	width: 5vw;
+	height: 5vw;
+	opacity: 0;
+	position: relative;
+	top: 4px;
+	left: 2px;
+	z-index: 10;
+}
+
+.label1 {
+	position: absolute;
+	z-index: 1;
+	left: 21.3vw;
+	/* right: 0px; */
+	top: 7px;
+	width: 4.3vw;
+	height: 4.3vw;
+	border-radius: 50%;
+	border: 1px solid #999;
+}
+
+.label2 {
+	position: absolute;
+	z-index: 1;
+	left: 3px;
+	/* right: 0px; */
+	top: 6px;
+	width: 4.3vw;
+	height: 4.3vw;
+	border-radius: 50%;
+	border: 1px solid #999;
+}
+
+
+/*设置选中的input的样式       + 是兄弟选择器,获取选中后的label元素*/
+
+input:checked+label {
+	background-color: #5DD9AB;
+	border: 1px solid #5DD9AB;
+}
+
+input:checked+label::after {
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 10px;
+	top: 0px;
+	left: 5px;
+	border: 2px solid #fff;
+	border-top: none;
+	border-left: none;
+	transform: rotate(45deg);
+}
+
+
+/*checkbox、radio end*/
+
+
+/*选择金币悬浮窗 begin*/
+
+.park_bg {
+	background: rgba(0, 0, 0, 0.5);
+	width: 101vw;
+	height: 101vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	display: none;
+}
+
+.choice_guibi {
+	position: fixed;
+	bottom: 0px;
+	background: #fff;
+	z-index: 11;
+	width: 100vw;
+	left: 0px;
+	display: none;
+}
+
+.choice_guibi .gold_coin_top {
+	display: flex;
+	justify-content: space-between;
+	height: 13.33vw;
+	align-items: center;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.choice_guibi .gold_coin_top p {
+	text-align: center;
+}
+
+.choice_guibi .gold_coin_top p.p_center {
+	flex: 4;
+	color: #222222;
+}
+
+.choice_guibi .gold_coin_top p.p_right,
+.choice_guibi .gold_coin_top p.p_left {
+	flex: 1;
+	color: #5DD9AB;
+}
+
+.choice_guibi .gold_coin_content_list {
+	padding: 0vw 0vw 30vw;
+}
+
+.choice_guibi .gold_coin_content {
+	padding: 4vw 4vw 4vw;
+	display: flex;
+	border-bottom: 1px solid #EEEEEE;
+	align-items: center;
+}
+
+.choice_guibi .gold_coin_content .coin_content_l {
+	position: relative;
+	padding-right: 4.667vw;
+}
+
+.choice_guibi .gold_coin_content .coin_content_r .p_top {
+	color: #222;
+}
+
+.choice_guibi .gold_coin_content .coin_content_r .p_bot {
+	color: #999;
+}
+
+
+/*选择金币悬浮窗 end*/
+
+
+/*错误提示*/
+
+.park_prompt {
+	z-index: 1000;
+	position: fixed;
+	top: 42vh;
+	width: 100vw;
+	text-align: center;
+}
+
+.ishide {
+	display: none;
+}
+
+.park_prompt p {
+	color: #FFFFFF;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 3.6vw 4.27vw;
+	min-width: 57vw;
+	max-width: 77vw;
+	margin: 0px auto;
+	display: inline-block;
+}
